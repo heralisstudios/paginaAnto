@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Document</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container header-container">
+      <a href="index.html" class="logo">
+        <img src="img/index/logo.jpg" alt="Logo">
+      </a>
+
+      <!-- BOTÓN MENÚ -->
+      <button id="menu-btn" class="menu-btn">☰</button>
+    </div>
+  </header>
+
+  <!-- SIDEBAR -->
+  <div id="sidebar" class="sidebar">
+
+    <button id="close-btn" class="close-btn">✖</button>
+
+    <div class="sidebar-item"><a href="index.html">Inicio</a></div>
+    <div class="sidebar-item"><a href="conjuntos.html">Conjuntos</a></div>
+    <div class="sidebar-item"><a href="bikinis.html">Bikinis</a></div>
+    <div class="sidebar-item"><a href="pijamas.html">Pijamas</a></div>
+    <div class="sidebar-item"><a href="bombis.html">Bombis (x3)</a></div>
+    <div class="sidebar-item"><a href="medias.html">Medias</a></div>
+
+  </div>
+
+  <!-- OVERLAY -->
+  <div id="overlay" class="overlay"></div>
+
+
+  <!-- SCRIPT PARA ABRIR/CERRAR -->
+  <script>
+    const menuBtn = document.getElementById("menu-btn");
+    const sidebar = document.getElementById("sidebar");
+    const closeBtn = document.getElementById("close-btn");
+    const overlay = document.getElementById("overlay");
+
+    menuBtn.addEventListener("click", () => {
+      sidebar.classList.add("sidebar-open");
+      overlay.classList.add("overlay-show");
+    });
+
+    closeBtn.addEventListener("click", () => {
+      sidebar.classList.remove("sidebar-open");
+      overlay.classList.remove("overlay-show");
+    });
+
+    overlay.addEventListener("click", () => {
+      sidebar.classList.remove("sidebar-open");
+      overlay.classList.remove("overlay-show");
+    });
+  </script>
+
+
+  <!-- HERO -->
+  <section id="hero">
+    <h1>indumentaria femenina / lencería / moda íntima</h1>
+  </section>
+
+  <!-- CATEGORÍAS -->
+  <section class="categorias-section">
+    <h2>CATEGORÍAS</h2>
+
+    <div class="categorias-container">
+
+      <a href="conjuntos.html" class="categoria-box" style="background-image: url('img/index/conjuntos.jpg');">
+        <h3>Conjuntos</h3>
+      </a>
+
+      <a href="bikinis.html" class="categoria-box" style="background-image: url('img/index/bikinis.jpg');">
+        <h3>Bikinis</h3>
+      </a>
+
+      <a href="pijamas.html" class="categoria-box" style="background-image: url('img/index/pijamas.jpg');">
+        <h3>Pijamas</h3>
+      </a>
+
+      <a href="bombis.html" class="categoria-box" style="background-image: url('img/index/bombis.jpg');">
+        <h3>Bombis (x3)</h3>
+      </a>
+
+      <a href="medias.html" class="categoria-box" style="background-image: url('img/index/medias.jpg');">
+        <h3>Medias</h3>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- INFO / REDES -->
+  <section class="info-section">
+    <ul>
+      <li>Villa Maria</li>
+      <li>Gmail: ejemplo@gmail.com</li>
+      <li>Teléfono: +11 1111 1111</li>
+      <li class="titulo-redes">NUESTRAS REDES SOCIALES</li>
+
+      <li class="redes">
+        <a href="https://www.instagram.com/seraphine_2025" target="_blank" class="icono-red">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram">
+        </a>
+
+        <a href="https://api.whatsapp.com/send/?phone=%2B5493534142723&text&type=phone_number&app_absent=0" target="_blank" class="icono-red">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp">
+        </a>
+      </li>
+    </ul>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p>&copy; Axel Calderón</p>
+    </div>
+  </footer>
+
+</body>
+</html>

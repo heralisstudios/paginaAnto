@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<script>    
+document.addEventListener("DOMContentLoaded", () => {
+    const productos = document.querySelectorAll(".producto");
+    productos.forEach((prod, index) => {
+        setTimeout(() => {
+            prod.classList.add("visible"); // agrega la clase con retraso
+        }, index * 150); // cada producto se retrasa 150ms
+    });
+});
+</script>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="container header-container">
+      <a href="index.html" class="logo">
+        <img src="img/index/logo.jpg" alt="Logo">
+      </a>
+
+      <!-- BOTÓN MENÚ -->
+      <button id="menu-btn" class="menu-btn">☰</button>
+    </div>
+</header>
+
+<!-- SIDEBAR -->
+<div id="sidebar" class="sidebar">
+
+    <button id="close-btn" class="close-btn">✖</button>
+
+    <div class="sidebar-item"><a href="index.html">Inicio</a></div>
+    <div class="sidebar-item"><a href="conjuntos.html">Conjuntos</a></div>
+    <div class="sidebar-item"><a href="bikinis.html">Bikinis</a></div>
+    <div class="sidebar-item"><a href="pijamas.html">Pijamas</a></div>
+    <div class="sidebar-item"><a href="bombis.html">Bombis (x3)</a></div>
+    <div class="sidebar-item"><a href="medias.html">Medias</a></div>
+
+</div>
+
+<!-- OVERLAY -->
+<div id="overlay" class="overlay"></div>
+
+<!-- SCRIPT PARA ABRIR/CERR  R -->
+<script>
+    const menuBtn = document.getElementById("menu-btn");
+    const sidebar = document.getElementById("sidebar");
+    const closeBtn = document.getElementById("close-btn");
+    const overlay = document.getElementById("overlay")
+    menuBtn.addEventListener("click", () => {
+        sidebar.classList.add("sidebar-open");
+        overlay.classList.add("overlay-show");
+    });
+    closeBtn.addEventListener("click", () => {
+        sidebar.classList.remove("sidebar-open");
+        overlay.classList.remove("overlay-show");
+    });
+    overlay.addEventListener("click", () => {
+        sidebar.classList.remove("sidebar-open");
+        overlay.classList.remove("overlay-show");
+    });
+</script>
+
+<section id="femeninos">
+    <div class="catalogo">
+        <div class="producto">
+            <img src="img/conjuntos/conjunto1.jpg" alt="conjunto1">
+            <div class="nombre-producto">conjunto1</div>
+            <div class="precio-producto">$12.000</div>
+        </div>
+        <div class="producto">
+            <img src="img/conjuntos/conjunto2.jpg" alt="conjunto2">
+            <div class="nombre-producto">conjunto2</div>
+            <div class="precio-producto">$15.000</div>
+        </div>
+        <div class="producto">
+            <img src="img/conjuntos/conjunto3.jpg" alt="conjunto3">
+            <div class="nombre-producto">conjunto3</div>
+            <div class="precio-producto">$18.000</div>
+        </div>
+        <div class="producto">  
+            <img src="img/conjuntos/conjunto1.jpg" alt="conjunto4">
+            <div class="nombre-producto">conjunto4</div>
+            <div class="precio-producto">$12.000</div>
+        </div>
+        <div class="producto">
+            <img src="img/conjuntos/conjunto2.jpg" alt="conjunto5">
+            <div class="nombre-producto">conjunto5</div>
+            <div class="precio-producto">$15.000</div>
+        </div>
+        <div class="producto">
+            <img src="img/conjuntos/conjunto3.jpg" alt="conjunto6">
+            <div class="nombre-producto">conjunto6</div>
+            <div class="precio-producto">$18.000</div>
+        </div>
+        <div class="producto">
+            <img src="img/conjuntos/conjunto1.jpg" alt="conjunto7">
+            <div class="nombre-producto">conjunto7</div>
+            <div class="precio-producto">$12.000</div>
+        </div>
+        <div class="producto">
+            <img src="img/conjuntos/conjunto2.jpg" alt="conjunto8">
+            <div class="nombre-producto">conjunto8</div>
+            <div class="precio-producto">$15.000</div>
+        </div>
+        <div class="producto">
+            <img src="img/conjuntos/conjunto3.jpg" alt="conjunto9">
+            <div class="nombre-producto">conjunto9</div>
+            <div class="precio-producto">$18.000</div>
+        </div>
+        <div class="producto">
+            <img src="img/conjuntos/conjunto1.jpg" alt="conjunto10">
+            <div class="nombre-producto">conjunto10</div>
+            <div class="precio-producto">$12.000</div>
+        </div>
+        <div class="producto">
+            <img src="img/conjuntos/conjunto2.jpg" alt="conjunto11">
+            <div class="nombre-producto">conjunto11</div>
+            <div class="precio-producto">$15.000</div>
+        </div>
+        <div class="producto">
+            <img src="img/conjuntos/conjunto3.jpg" alt="conjunto12">
+            <div class="nombre-producto">conjunto12</div>
+            <div class="precio-producto">$18.000</div>
+        </div>
+    </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+    <div class="container">
+        <p>&copy; Axel Calderón</p>
+    </div>
+</footer>
+
+</bod>
+</html>
