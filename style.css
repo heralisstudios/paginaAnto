@@ -129,6 +129,27 @@ nav a {
   transform: scale(1.06);
 }
 
+/* Imágenes de categorías */
+.categoria-box.conjuntos {
+  background-image: url('index/conjuntos.jpg');
+}
+
+.categoria-box.bikinis {
+  background-image: url('index/bikinis.jpg');
+}
+
+.categoria-box.pijamas {
+  background-image: url('index/pijamas.jpg');
+}
+
+.categoria-box.bombis {
+  background-image: url('index/bombis.jpg');
+}
+
+.categoria-box.medias {
+  background-image: url('index/medias.jpg');
+}
+
 
 /* =========================================================
    INFO / REDES
