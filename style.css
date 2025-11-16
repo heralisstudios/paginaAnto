@@ -52,7 +52,7 @@ nav a {
 ========================================================= */
 #hero {
   position: relative;
-  background: url('img/index/hero.jpg') no-repeat center / cover;
+  background: url('index/hero.jpg') no-repeat center / cover;
   height: 260px;
   display: flex;
   align-items: center;
