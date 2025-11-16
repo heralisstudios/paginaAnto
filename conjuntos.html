@@ -1,144 +1,250 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <title>Document</title>
+    <meta charset="UTF-8">
+    <title>Catálogo de Conjuntos</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
 </head>
-<script>    
-document.addEventListener("DOMContentLoaded", () => {
-    const productos = document.querySelectorAll(".producto");
-    productos.forEach((prod, index) => {
-        setTimeout(() => {
-            prod.classList.add("visible"); // agrega la clase con retraso
-        }, index * 150); // cada producto se retrasa 150ms
-    });
-});
-</script>
-
 <body>
 
 <!-- HEADER -->
 <header>
     <div class="container header-container">
-      <a href="index.html" class="logo">
-        <img src="img/index/logo.jpg" alt="Logo">
-      </a>
-
-      <!-- BOTÓN MENÚ -->
-      <button id="menu-btn" class="menu-btn">☰</button>
+        <a href="index.html" class="logo">
+            <img src="img/index/logo.jpg" alt="Logo">
+        </a>
+        <button id="menu-btn" class="menu-btn">☰</button>
     </div>
 </header>
 
 <!-- SIDEBAR -->
 <div id="sidebar" class="sidebar">
-
     <button id="close-btn" class="close-btn">✖</button>
-
     <div class="sidebar-item"><a href="index.html">Inicio</a></div>
     <div class="sidebar-item"><a href="conjuntos.html">Conjuntos</a></div>
     <div class="sidebar-item"><a href="bikinis.html">Bikinis</a></div>
     <div class="sidebar-item"><a href="pijamas.html">Pijamas</a></div>
     <div class="sidebar-item"><a href="bombis.html">Bombis (x3)</a></div>
     <div class="sidebar-item"><a href="medias.html">Medias</a></div>
-
 </div>
 
-<!-- OVERLAY -->
 <div id="overlay" class="overlay"></div>
 
-<!-- SCRIPT PARA ABRIR/CERR  R -->
-<script>
-    const menuBtn = document.getElementById("menu-btn");
-    const sidebar = document.getElementById("sidebar");
-    const closeBtn = document.getElementById("close-btn");
-    const overlay = document.getElementById("overlay")
-    menuBtn.addEventListener("click", () => {
-        sidebar.classList.add("sidebar-open");
-        overlay.classList.add("overlay-show");
-    });
-    closeBtn.addEventListener("click", () => {
-        sidebar.classList.remove("sidebar-open");
-        overlay.classList.remove("overlay-show");
-    });
-    overlay.addEventListener("click", () => {
-        sidebar.classList.remove("sidebar-open");
-        overlay.classList.remove("overlay-show");
-    });
-</script>
-
+<!-- PRODUCTOS -->
 <section id="femeninos">
     <div class="catalogo">
-        <div class="producto">
-            <img src="img/conjuntos/conjunto1.jpg" alt="conjunto1">
-            <div class="nombre-producto">conjunto1</div>
+
+        <!-- PRODUCTO 1 -->
+        <div class="producto"
+            data-producto="Conjunto 1"
+            data-precio="$12.000"
+            data-images='[
+                "img/conjuntos/conjunto1.jpg",
+                "img/conjuntos/conjunto2.jpg",
+                "img/conjuntos/conjunto3.jpg"
+            ]'
+            data-talles='["S","M","L"]'
+            data-colores='["Rojo","Negro","Blanco"]'>
+            
+            <img src="img/conjuntos/conjunto3.jpg" alt="Conjunto 1">
+            <div class="nombre-producto">Conjunto 1</div>
             <div class="precio-producto">$12.000</div>
+            <button class="btn-comprar">Comprar</button>
         </div>
-        <div class="producto">
-            <img src="img/conjuntos/conjunto2.jpg" alt="conjunto2">
-            <div class="nombre-producto">conjunto2</div>
+
+        <!-- PRODUCTO 2 -->
+        <div class="producto"
+            data-producto="Conjunto 2"
+            data-precio="$15.000"
+            data-images='[
+                "img/conjuntos/conjunto1.jpg",
+                "img/conjuntos/conjunto2.jpg",
+                "img/conjuntos/conjunto3.jpg"
+            ]'
+            data-talles='["M","L","XL"]'
+            data-colores='["Negro","Azul"]'>
+            
+            <img src="img/conjuntos/conjunto2.jpg" alt="Conjunto 2">
+            <div class="nombre-producto">Conjunto 2</div>
             <div class="precio-producto">$15.000</div>
+            <button class="btn-comprar">Comprar</button>
         </div>
-        <div class="producto">
-            <img src="img/conjuntos/conjunto3.jpg" alt="conjunto3">
-            <div class="nombre-producto">conjunto3</div>
-            <div class="precio-producto">$18.000</div>
+
+        <!-- PRODUCTO 3 -->
+        <div class="producto"
+            data-producto="Conjunto 3"
+            data-precio="$13.500"
+            data-images='[
+                "img/conjuntos/conjunto1.jpg",
+                "img/conjuntos/conjunto2.jpg",
+                "img/conjuntos/conjunto3.jpg"
+            ]'
+            data-talles='["S","M"]'
+            data-colores='["Blanco","Rosa"]'>
+            
+            <img src="img/conjuntos/conjunto1.jpg" alt="Conjunto 3">
+            <div class="nombre-producto">Conjunto 3</div>
+            <div class="precio-producto">$13.500</div>
+            <button class="btn-comprar">Comprar</button>
         </div>
-        <div class="producto">  
-            <img src="img/conjuntos/conjunto1.jpg" alt="conjunto4">
-            <div class="nombre-producto">conjunto4</div>
-            <div class="precio-producto">$12.000</div>
+
+        <!-- PRODUCTO 4 -->
+        <div class="producto"
+            data-producto="Conjunto 4"
+            data-precio="$14.000"
+            data-images='[
+                "img/conjuntos/conjunto1.jpg",
+                "img/conjuntos/conjunto2.jpg",
+                "img/conjuntos/conjunto3.jpg"
+            ]'
+            data-talles='["L","XL"]'
+            data-colores='["Negro"]'>
+            
+            <img src="img/conjuntos/conjunto2.jpg" alt="Conjunto 4">
+            <div class="nombre-producto">Conjunto 4</div>
+            <div class="precio-producto">$14.000</div>
+            <button class="btn-comprar">Comprar</button>
         </div>
-        <div class="producto">
-            <img src="img/conjuntos/conjunto2.jpg" alt="conjunto5">
-            <div class="nombre-producto">conjunto5</div>
-            <div class="precio-producto">$15.000</div>
-        </div>
-        <div class="producto">
-            <img src="img/conjuntos/conjunto3.jpg" alt="conjunto6">
-            <div class="nombre-producto">conjunto6</div>
-            <div class="precio-producto">$18.000</div>
-        </div>
-        <div class="producto">
-            <img src="img/conjuntos/conjunto1.jpg" alt="conjunto7">
-            <div class="nombre-producto">conjunto7</div>
-            <div class="precio-producto">$12.000</div>
-        </div>
-        <div class="producto">
-            <img src="img/conjuntos/conjunto2.jpg" alt="conjunto8">
-            <div class="nombre-producto">conjunto8</div>
-            <div class="precio-producto">$15.000</div>
-        </div>
-        <div class="producto">
-            <img src="img/conjuntos/conjunto3.jpg" alt="conjunto9">
-            <div class="nombre-producto">conjunto9</div>
-            <div class="precio-producto">$18.000</div>
-        </div>
-        <div class="producto">
-            <img src="img/conjuntos/conjunto1.jpg" alt="conjunto10">
-            <div class="nombre-producto">conjunto10</div>
-            <div class="precio-producto">$12.000</div>
-        </div>
-        <div class="producto">
-            <img src="img/conjuntos/conjunto2.jpg" alt="conjunto11">
-            <div class="nombre-producto">conjunto11</div>
-            <div class="precio-producto">$15.000</div>
-        </div>
-        <div class="producto">
-            <img src="img/conjuntos/conjunto3.jpg" alt="conjunto12">
-            <div class="nombre-producto">conjunto12</div>
-            <div class="precio-producto">$18.000</div>
-        </div>
+
     </div>
 </section>
 
+<!-- MODAL -->
+<div class="modal" id="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+
+        <div class="modal-carousel">
+            <button class="carousel-btn" id="prev">&#10094;</button>
+            <img id="modal-img" src="" alt="color del producto">
+            <button class="carousel-btn" id="next">&#10095;</button>
+        </div>
+
+        <h3 id="modal-producto">Producto</h3>
+        <p id="modal-precio">$0</p>
+        <p>&nbsp;</p>
+
+        <label>Talle:</label>
+        <select id="talle"></select>
+
+        <label>Color:</label>
+        <select id="color"></select>
+
+        <label>Cantidad:</label>
+        <input type="number" id="cantidad" value="1" min="1">
+
+        <button class="btn-comprar-wsp" id="comprar-whatsapp">Comprar por WhatsApp</button>
+    </div>
+</div>
 
 <!-- FOOTER -->
 <footer>
     <div class="container">
-        <p>&copy; Axel Calderón</p>
+        <p>&copy; ///</p>
     </div>
 </footer>
 
-</bod>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    // Animación de aparición
+    document.querySelectorAll(".producto").forEach((p, i) => {
+        setTimeout(() => p.classList.add("visible"), i * 150);
+    });
+
+    // Sidebar
+    const menuBtn = document.getElementById("menu-btn");
+    const sidebar = document.getElementById("sidebar");
+    const closeBtn = document.getElementById("close-btn");
+    const overlay = document.getElementById("overlay");
+
+    menuBtn.onclick = () => { sidebar.classList.add("sidebar-open"); overlay.classList.add("overlay-show"); }
+    closeBtn.onclick = () => { sidebar.classList.remove("sidebar-open"); overlay.classList.remove("overlay-show"); }
+    overlay.onclick = () => { sidebar.classList.remove("sidebar-open"); overlay.classList.remove("overlay-show"); }
+
+    // Modal
+    const modal = document.getElementById("modal");
+    const closeModal = document.querySelector(".close");
+    const modalProducto = document.getElementById("modal-producto");
+    const modalPrecio = document.getElementById("modal-precio");
+    const modalImg = document.getElementById("modal-img");
+
+    const selectTalle = document.getElementById("talle");
+    const selectColor = document.getElementById("color");
+    const cantidad = document.getElementById("cantidad");
+
+    let currentImages = [];
+    let currentIndex = 0;
+
+    // Abrir modal
+    document.querySelectorAll(".btn-comprar").forEach(btn => {
+        btn.addEventListener("click", () => {
+
+            const productoDiv = btn.closest(".producto");
+
+            const producto = productoDiv.dataset.producto;
+            const precio = productoDiv.dataset.precio;
+            const images = JSON.parse(productoDiv.dataset.images);
+            const talles = JSON.parse(productoDiv.dataset.talles);
+            const colores = JSON.parse(productoDiv.dataset.colores);
+
+            modalProducto.textContent = producto;
+            modalPrecio.textContent = precio;
+
+            // IMÁGENES
+            currentImages = images;
+            currentIndex = 0;
+            modalImg.src = currentImages[currentIndex];
+
+            // Talles dinámicos
+            selectTalle.innerHTML = "";
+            talles.forEach(t => {
+                let o = document.createElement("option");
+                o.value = t;
+                o.textContent = t;
+                selectTalle.appendChild(o);
+            });
+
+            // Colores dinámicos
+            selectColor.innerHTML = "";
+            colores.forEach(c => {
+                let o = document.createElement("option");
+                o.value = c;
+                o.textContent = c;
+                selectColor.appendChild(o);
+            });
+
+            cantidad.value = 1;
+
+            modal.style.display = "block";
+        });
+    });
+
+    // Carousel
+    document.getElementById("prev").onclick = () => {
+        currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
+        modalImg.src = currentImages[currentIndex];
+    };
+
+    document.getElementById("next").onclick = () => {
+        currentIndex = (currentIndex + 1) % currentImages.length;
+        modalImg.src = currentImages[currentIndex];
+    };
+
+    // Cerrar modal
+    closeModal.onclick = () => modal.style.display = "none";
+    window.onclick = e => { if (e.target === modal) modal.style.display = "none"; }
+
+    // WhatsApp
+    document.getElementById("comprar-whatsapp").onclick = () => {
+        const mensaje = `Hola! Estoy interesado en ${modalProducto.textContent} (Talle: ${selectTalle.value}, Color: ${selectColor.value}, Cantidad: ${cantidad.value}) - Precio: ${modalPrecio.textContent}`;
+        const url = "https://api.whatsapp.com/send/?phone=5493537667902&text=" + encodeURIComponent(mensaje);
+        window.open(url, "_blank");
+    };
+
+});
+</script>
+
+</body>
 </html>
