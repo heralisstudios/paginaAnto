@@ -52,7 +52,7 @@ nav a {
 ========================================================= */
 #hero {
   position: relative;
-  background: url('index/hero.jpg') no-repeat center / cover;
+  background: url('img/index/hero.jpg') no-repeat center / cover;
   height: 260px;
   display: flex;
   align-items: center;
@@ -131,23 +131,23 @@ nav a {
 
 /* Imágenes de categorías */
 .categoria-box.conjuntos {
-  background-image: url('index/conjuntos.jpg');
+  background-image: url('img/index/conjuntos.jpg');
 }
 
 .categoria-box.bikinis {
-  background-image: url('index/bikinis.jpg');
+  background-image: url('img/index/bikinis.jpg');
 }
 
 .categoria-box.pijamas {
-  background-image: url('index/pijamas.jpg');
+  background-image: url('img/index/pijamas.jpg');
 }
 
 .categoria-box.bombis {
-  background-image: url('index/bombis.jpg');
+  background-image: url('img/index/bombis.jpg');
 }
 
 .categoria-box.medias {
-  background-image: url('index/medias.jpg');
+  background-image: url('img/index/medias.jpg');
 }
 
 
