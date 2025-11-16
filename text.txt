@@ -1,0 +1,5 @@
+conjuntos (talle, color, cantidad)
+bikinis ()
+pijamas (talle, estampa, cantidad)
+bombis (pack x3)
+medias (cantidad)
