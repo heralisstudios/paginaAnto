@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Catálogo de Conjuntos</title>
+    <title>Catálogo de Bikinis</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -22,14 +22,98 @@
 <div id="sidebar" class="sidebar">
     <button id="close-btn" class="close-btn">✖</button>
     <div class="sidebar-item"><a href="index.html">Inicio</a></div>
-    <div class="sidebar-item"><a href="conjuntos.html">Conjuntos</a></div>
+    <div class="sidebar-item"><a href="bikinis.html">Bikinis</a></div>
     <div class="sidebar-item"><a href="bikinis.html">Bikinis</a></div>
     <div class="sidebar-item"><a href="pijamas.html">Pijamas</a></div>
     <div class="sidebar-item"><a href="bombis.html">Bombis (x3)</a></div>
     <div class="sidebar-item"><a href="medias.html">Medias</a></div>
+    <div class="sidebar-item"><a href="deportivos.html">Deportivos</a></div>
 </div>
 
 <div id="overlay" class="overlay"></div>
+
+<!-- PRODUCTOS -->
+<section>
+    <div class="catalogo">
+        <!-- PRODUCTOS CARGADOS BIEN -->
+
+        <!-- PRODUCTO 1 -->
+        <div class="producto"
+            data-producto="Bambula con vedetina"
+            data-precio="$10.000"
+            data-images='[
+                "img/bikinis/bikini1-1.png"
+            ]'
+            data-talles='["-","1","4"]'
+            data-colores='["-","Blanco","Celeste","Beige"]'>
+            
+            <img src="img/bikinis/Bikini1-1.png" alt="">
+            <div class="nombre-producto">Bambula con vedetina </div>
+            <div class="precio-producto">$10.000</div>
+            <button class="btn-comprar">Ver</button>
+        </div>
+
+        <!-- PRODUCTO 1 -->
+        <div class="producto"
+            data-producto="Pro duo con argolla"
+            data-precio="$12.000"
+            data-images='[
+                "img/bikinis/bikini2-1.png"
+            ]'
+            data-talles='["-","1","4"]'
+            data-colores='["-","Blanco-Negro","Verde","Marrón"]'>
+            
+            <img src="img/bikinis/Bikini2-1.png" alt="">
+            <div class="nombre-producto">Pro duo con argolla</div>
+            <div class="precio-producto">$12.000</div>
+            <button class="btn-comprar">Ver</button>
+        </div>
+
+        <!-- PRODUCTO 1 -->
+        <div class="producto"
+            data-producto="Clasic lisa-gira larga "
+            data-precio="$10.000"
+            data-images='[
+                "img/bikinis/bikini3-1.png"
+            ]'
+            data-talles='["-","1","4"]'
+            data-colores='["-","Negro","Verde","Violeta"]'>
+            
+            <img src="img/bikinis/Bikini3-1.png" alt="">
+            <div class="nombre-producto">Clasic lisa-gira larga</div>
+            <div class="precio-producto">$10.000</div>
+            <button class="btn-comprar">Ver</button>
+        </div>
+    </div>
+</section>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+
+        <div class="modal-carousel">
+            <button class="carousel-btn" id="prev">&#10094;</button>
+            <img id="modal-img" src="" alt="color del producto">
+            <button class="carousel-btn" id="next">&#10095;</button>
+        </div>
+
+        <h3 id="modal-producto">Producto</h3>
+        <p id="modal-precio">$0</p>
+        <p>&nbsp;</p>
+
+        <label>Talle:</label>
+        <select id="talle"></select>
+
+        <label>Color:</label>
+        <select id="color"></select>
+
+        <label>Cantidad:</label>
+        <input type="number" id="cantidad" value="1" min="1">
+
+        <button class="btn-comprar-wsp" id="comprar-whatsapp">Comprar por WhatsApp</button>
+    </div>
+</div>
 
 <!-- FOOTER -->
 <footer>

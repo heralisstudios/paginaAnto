@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Catálogo de Conjuntos</title>
+    <title>Catálogo de Medias</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -25,11 +25,80 @@
     <div class="sidebar-item"><a href="conjuntos.html">Conjuntos</a></div>
     <div class="sidebar-item"><a href="bikinis.html">Bikinis</a></div>
     <div class="sidebar-item"><a href="pijamas.html">Pijamas</a></div>
-    <div class="sidebar-item"><a href="bombis.html">Bombis (x3)</a></div>
+    <div class="sidebar-item"><a href="bombis.html">Bombis</a></div>
     <div class="sidebar-item"><a href="medias.html">Medias</a></div>
+    <div class="sidebar-item"><a href="deportivos.html">Deportivos</a></div>
 </div>
 
 <div id="overlay" class="overlay"></div>
+
+<!-- PRODUCTOS -->
+<section>
+    <div class="catalogo">
+
+        <!-- PRODUCTO 1 -->
+        <div class="producto"
+            data-producto="Media 1"
+            data-precio="$"
+            data-images='[
+                "img/medias/media1-1.jpg",
+                "img/medias/media1-2.jpg",
+                "img/medias/media1-3.jpg"
+            ]'>
+            
+            <img src="img/medias/media1-1.jpg" alt="">
+            <div class="nombre-producto"></div>
+            <div class="precio-producto">$</div>
+            <button class="btn-comprar">Ver</button>
+        </div>
+
+        <!-- PRODUCTO 2 -->
+        <div class="producto"
+            data-producto="Media 2"
+            data-precio="$"
+            data-images='[
+                "img/medias/media2-1.jpg",
+                "img/medias/media2-2.jpg",
+                "img/medias/media2-3.jpg"
+            ]'>
+            
+            <img src="img/medias/media2-1.jpg" alt="">
+            <div class="nombre-producto"></div>
+            <div class="precio-producto">$</div>
+            <button class="btn-comprar">Ver</button>
+        </div>
+
+        <!-- AGREGÁS HASTA EL N PRODUCTO IGUAL QUE ARRIBA -->
+    </div>
+</section>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+
+        <div class="modal-carousel">
+            <button class="carousel-btn" id="prev">&#10094;</button>
+            <img id="modal-img" src="" alt="">
+            <button class="carousel-btn" id="next">&#10095;</button>
+        </div>
+
+        <h3 id="modal-producto">Producto</h3>
+        <p id="modal-precio">$0</p>
+        <p>&nbsp;</p>
+
+        <label>Tipo de venta:</label>
+        <select id="tipo-venta">
+            <option value="Docena">Docena</option>
+            <option value="Media docena">Media docena</option>
+        </select>
+
+        <label>Cantidad:</label>
+        <input type="number" id="cantidad" value="1" min="1">
+
+        <button class="btn-comprar-wsp" id="comprar-whatsapp">Comprar por WhatsApp</button>
+    </div>
+</div>
 
 <!-- FOOTER -->
 <footer>
@@ -41,7 +110,7 @@
 <script>
 document.addEventListener("DOMContentLoaded", () => {
 
-    // Animación de aparición
+    // Animación
     document.querySelectorAll(".producto").forEach((p, i) => {
         setTimeout(() => p.classList.add("visible"), i * 150);
     });
@@ -63,8 +132,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const modalPrecio = document.getElementById("modal-precio");
     const modalImg = document.getElementById("modal-img");
 
-    const selectTalle = document.getElementById("talle");
-    const selectColor = document.getElementById("color");
+    const selectTipoVenta = document.getElementById("tipo-venta");
     const cantidad = document.getElementById("cantidad");
 
     let currentImages = [];
@@ -79,37 +147,15 @@ document.addEventListener("DOMContentLoaded", () => {
             const producto = productoDiv.dataset.producto;
             const precio = productoDiv.dataset.precio;
             const images = JSON.parse(productoDiv.dataset.images);
-            const talles = JSON.parse(productoDiv.dataset.talles);
-            const colores = JSON.parse(productoDiv.dataset.colores);
 
             modalProducto.textContent = producto;
             modalPrecio.textContent = precio;
 
-            // IMÁGENES
             currentImages = images;
             currentIndex = 0;
             modalImg.src = currentImages[currentIndex];
 
-            // Talles dinámicos
-            selectTalle.innerHTML = "";
-            talles.forEach(t => {
-                let o = document.createElement("option");
-                o.value = t;
-                o.textContent = t;
-                selectTalle.appendChild(o);
-            });
-
-            // Colores dinámicos
-            selectColor.innerHTML = "";
-            colores.forEach(c => {
-                let o = document.createElement("option");
-                o.value = c;
-                o.textContent = c;
-                selectColor.appendChild(o);
-            });
-
             cantidad.value = 1;
-
             modal.style.display = "block";
         });
     });
@@ -125,13 +171,18 @@ document.addEventListener("DOMContentLoaded", () => {
         modalImg.src = currentImages[currentIndex];
     };
 
-    // Cerrar modal
+    // Cerrar
     closeModal.onclick = () => modal.style.display = "none";
     window.onclick = e => { if (e.target === modal) modal.style.display = "none"; }
 
     // WhatsApp
     document.getElementById("comprar-whatsapp").onclick = () => {
-        const mensaje = `Hola! Estoy interesado en ${modalProducto.textContent} (Talle: ${selectTalle.value}, Color: ${selectColor.value}, Cantidad: ${cantidad.value}) - Precio: ${modalPrecio.textContent}`;
+        const mensaje = 
+`Hola! Estoy interesado en ${modalProducto.textContent}
+Tipo de venta: ${selectTipoVenta.value}
+Cantidad: ${cantidad.value}
+Precio: ${modalPrecio.textContent}`;
+
         const url = "https://api.whatsapp.com/send/?phone=5493537667902&text=" + encodeURIComponent(mensaje);
         window.open(url, "_blank");
     };

@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Catálogo de Pijamas</title>
+    <title>Catálogo de Deportivos</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -37,39 +37,55 @@
 <section>
     <div class="catalogo">
 
-        <!-- PIJAMA 1 -->
+        <!-- DEPORTIVO 1 -->
         <div class="producto"
-            data-producto="Pijama dama 2 piezas (short + musculosa)"
-            data-precio="$12.000"
+            data-producto="Top deportivo tira ancha "
+            data-precio="$5.500"
             data-images='[
-                "img/pijamas/pijama1-1.png",
-                "img/pijamas/pijama1-2.png"
+                "img/deportivos/deportivo1-1.png",
+                "img/deportivos/deportivo1-2.png"
             ]'
             data-talles='["-"]'
-            data-colores='["-"]'>
+            data-colores='["-","Negro","Gris","Rojo","Marrón","Beige","Bordó"]'>
             
-            <img src="img/pijamas/pijama1-1.png" alt="">
-            <div class="nombre-producto">Pijama dama 2 piezas (short + musculosa)</div>
-            <div class="precio-producto">$12.000</div>
+            <img src="img/deportivos/deportivo1-1.png" alt="">
+            <div class="nombre-producto">Top deportivo tira ancha </div>
+            <div class="precio-producto">$5.500</div>
             <button class="btn-comprar">Ver</button>
         </div>
 
-        <!-- PIJAMA 2 -->
+        <!-- DEPORTIVO 2 -->
         <div class="producto"
-            data-producto="Pijama dama 2 piezas (remera + short)"
-            data-precio="$13.000"
+            data-producto="Top despótico tira fina "
+            data-precio="$5.000"
             data-images='[
-                "img/pijamas/pijama2-1.png",
-                "img/pijamas/pijama2-2.png"
+                "img/deportivos/deportivo2-1.png"
             ]'
             data-talles='["-"]'
-            data-colores='["-"]'>
+            data-colores='["-","Blanco","Negro","Marrón"]'>
             
-            <img src="img/pijamas/pijama2-1.png" alt="">
-            <div class="nombre-producto">Pijama dama 2 piezas (remera + short)</div>
-            <div class="precio-producto">$13.000</div>
+            <img src="img/deportivos/deportivo2-1.png" alt="">
+            <div class="nombre-producto">Top despótico tira fina </div>
+            <div class="precio-producto">$5.000</div>
             <button class="btn-comprar">Ver</button>
         </div>
+
+        <!-- DEPORTIVO 3 -->
+        <div class="producto"
+            data-producto="Conjuntos deportivos (top-calza)"
+            data-precio="$10.000"
+            data-images='[
+                "img/deportivos/deportivo3-1.png"
+            ]'
+            data-talles='["-"]'
+            data-colores='["-","Azul","Rosa"]'>
+            
+            <img src="img/deportivos/deportivo3-1.png" alt="">
+            <div class="nombre-producto">Conjuntos deportivos (top-calza)</div>
+            <div class="precio-producto">$10.000</div>
+            <button class="btn-comprar">Ver</button>
+        </div>
+
     </div>
 </section>
 
@@ -111,7 +127,7 @@
 <script>
 document.addEventListener("DOMContentLoaded", () => {
 
-    // Animación de aparición
+    // Animación
     document.querySelectorAll(".producto").forEach((p, i) => {
         setTimeout(() => p.classList.add("visible"), i * 150);
     });
