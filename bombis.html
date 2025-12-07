@@ -5,6 +5,8 @@
     <title>Catálogo de Conjuntos</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/jpeg" href="img/index/logo.jpg">
+
 </head>
 <body>
 
@@ -26,7 +28,7 @@
     <div class="sidebar-item"><a href="bikinis.html">Bikinis</a></div>
     <div class="sidebar-item"><a href="pijamas.html">Pijamas</a></div>
     <div class="sidebar-item"><a href="bombis.html">bombis</a></div>
-    <div class="sidebar-item"><a href="medias.html">Medias</a></div>
+    <div class="sidebar-item"><a href="varios.html">Varios</a></div>
     <div class="sidebar-item"><a href="deportivos.html">Deportivos</a></div>
 </div>
 
@@ -37,60 +39,80 @@
 
         <!-- PRODUCTO 1 -->
         <div class="producto"
-            data-producto="Bombi 1"
-            data-precio="$"
-            data-images='[
-                "img/bombis/bombi1-1.jpg",
-                "img/bombis/bombi1-2.jpg",
-                "img/bombis/bombi1-3.jpg",
-                "img/bombis/bombi1-4.jpg",
-                "img/bombis/bombi1-5.jpg"
-            ]'
-            data-talles='["L","XL"]'>
+            data-producto="Colales algodón regulables (x3)"
+            data-precio="$7.000"
+            data-images='["img/bombis/bombi1-1.png"]'
+            data-color='["-","Negro","Blanco","Rojo"]'>
             
-            <img src="img/bombis/bombi1-1.jpg" alt="">
-            <div class="nombre-producto"></div>
-            <div class="precio-producto">$</div>
+            <img src="img/bombis/bombi1-1.png" alt="">
+            <div class="nombre-producto">Colales algodón regulables (x3)</div>
+            <div class="precio-producto">$7.000</div>
             <button class="btn-comprar">Ver</button>
         </div>
 
         <!-- PRODUCTO 2 -->
         <div class="producto"
-            data-producto="Bombi 2"
-            data-precio="$"
-            data-images='[
-                "img/bombis/bombi2-1.jpg",
-                "img/bombis/bombi2-2.jpg",
-                "img/bombis/bombi2-3.jpg",
-                "img/bombis/bombi2-4.jpg",
-                "img/bombis/bombi2-5.jpg"
-            ]'
-            data-talles='["L","XL"]'>
+            data-producto="Colales de lycra (x3)"
+            data-precio="$5.500"
+            data-images='["img/bombis/bombi2-1.png"]'
+            data-color='["-","Negro","Blanco","Rojo"]'>
             
-            <img src="img/bombis/bombi2-1.jpg" alt="">
-            <div class="nombre-producto"></div>
-            <div class="precio-producto">$</div>
+            <img src="img/bombis/bombi2-1.png" alt="">
+            <div class="nombre-producto">Colales de lycra (x3)</div>
+            <div class="precio-producto">$5.500</div>
             <button class="btn-comprar">Ver</button>
         </div>
 
         <!-- PRODUCTO 3 -->
         <div class="producto"
-            data-producto="Bombi 3"
-            data-precio="$"
-            data-images='[
-                "img/bombis/bombi3-1.jpg",
-                "img/bombis/bombi3-2.jpg",
-                "img/bombis/bombi3-3.jpg",
-                "img/bombis/bombi3-4.jpg",
-                "img/bombis/bombi3-5.jpg"
-            ]'
-            data-talles='["L","XL"]'>
+            data-producto="Colales de morley regulables (x3)"
+            data-precio="$7.000"
+            data-images='["img/bombis/bombi3-1.png"]'
+            data-color='["-","Violeta","Azul","Amarillo","Beige"]'>
             
-            <img src="img/bombis/bombi3-1.jpg" alt="">
-            <div class="nombre-producto"></div>
-            <div class="precio-producto">$</div>
+            <img src="img/bombis/bombi3-1.png" alt="">
+            <div class="nombre-producto">Colales de morley regulables (x3)</div>
+            <div class="precio-producto">$7.000</div>
             <button class="btn-comprar">Ver</button>
         </div>
+
+        <!-- PRODUCTO 4 -->
+        <div class="producto"
+            data-producto="Colales algodón (x3)"
+            data-precio="$6.500"
+            data-images='["img/bombis/bombi4-1.png"]'
+            data-color='["-","Blanco","Rojo","Beige"]'>
+            
+            <img src="img/bombis/bombi4-1.png" alt="">
+            <div class="nombre-producto">Colales algodón (x3)</div>
+            <div class="precio-producto">$6.500</div>
+            <button class="btn-comprar">Ver</button>
+        </div>
+
+        <!-- PRODUCTO 5 -->
+        <div class="producto"
+            data-producto="Colales segunda piel (x3)"
+            data-precio="$2.500"
+            data-images='["img/bombis/bombi5-1.png"]'
+            data-color='["-","Dorado","Blanco","Negro"]'>
+            
+            <img src="img/bombis/bombi5-1.png" alt="">
+            <div class="nombre-producto">Colales segunda piel (x3)</div>
+            <div class="precio-producto">$2.500</div>
+            <button class="btn-comprar">Ver</button>
+        </div>
+
+        <!-- PRODUCTO 6 -->
+        <div class="producto"
+            data-producto="Colales algodón con puntilla (x3)"
+            data-precio="$3.500"
+            data-images='["img/bombis/bombi6-1.png"]'
+            data-color='["-"]'>
+
+            <img src="img/bombis/bombi6-1.png" alt="">
+            <div class="nombre-producto">Colales algodón con puntilla (x3)</div>
+            <div class="precio-producto">$3.500</div>
+            <button class="btn-comprar">Ver</button>
 </section>
 
 <!-- MODAL -->
@@ -108,14 +130,8 @@
         <p id="modal-precio">$0</p>
         <p>&nbsp;</p>
 
-        <label>Talle:</label>
-        <select id="talle"></select>
-
-        <label>Tipo de paquete:</label>
-        <select id="tipo">
-            <option value="Media docena">Media docena</option>
-            <option value="Docena">Docena</option>
-        </select>
+        <label>Color:</label>
+        <select id="color"></select>
 
         <label>Cantidad:</label>
         <input type="number" id="cantidad" value="1" min="1">
@@ -133,21 +149,17 @@
 <script>
 document.addEventListener("DOMContentLoaded", () => {
 
-    // --- MENÚ HAMBURGUESA / SIDEBAR ---
+    // MENÚ
     const menuBtn = document.getElementById("menu-btn");
     const sidebar = document.getElementById("sidebar");
     const closeBtn = document.getElementById("close-btn");
     const overlay = document.getElementById("overlay");
 
-    // Seguridad: si no existen elementos, no explota
-    function safeAddEvent(el, ev, fn){
-        if(el) el.addEventListener(ev, fn);
-    }
+    function safeAddEvent(el, ev, fn){ if(el) el.addEventListener(ev, fn); }
 
     safeAddEvent(menuBtn, "click", () => {
         sidebar.classList.add("sidebar-open");
         overlay.classList.add("overlay-show");
-        // opcional: bloquear scroll del body mientras esté abierto
         document.body.style.overflow = "hidden";
     });
 
@@ -163,29 +175,19 @@ document.addEventListener("DOMContentLoaded", () => {
         document.body.style.overflow = "";
     });
 
-    // cerrar con ESC
-    safeAddEvent(document, "keyup", (e) => {
-        if (e.key === "Escape") {
-            sidebar.classList.remove("sidebar-open");
-            overlay.classList.remove("overlay-show");
-            document.body.style.overflow = "";
-        }
-    });
-
-    // --- ANIMACIÓN DE APARICIÓN PRODUCTOS ---
+    // ANIMACIÓN
     document.querySelectorAll(".producto").forEach((p, i) => {
         setTimeout(() => p.classList.add("visible"), i * 150);
     });
 
-    // --- MODAL / CARRUSEL / COMPRA WHATSAPP ---
+    // MODAL
     const modal = document.getElementById("modal");
     const closeModal = document.querySelector(".close");
     const modalProducto = document.getElementById("modal-producto");
     const modalPrecio = document.getElementById("modal-precio");
     const modalImg = document.getElementById("modal-img");
 
-    const selectTalle = document.getElementById("talle");
-    const selectTipo = document.getElementById("tipo");
+    const selectColor = document.getElementById("color");
     const cantidad = document.getElementById("cantidad");
 
     let currentImages = [];
@@ -199,7 +201,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const producto = productoDiv.dataset.producto || "";
             const precio = productoDiv.dataset.precio || "";
             const images = JSON.parse(productoDiv.dataset.images || '[]');
-            const talles = JSON.parse(productoDiv.dataset.talles || '[]');
+            const colores = JSON.parse(productoDiv.dataset.color || '[]');
 
             modalProducto.textContent = producto;
             modalPrecio.textContent = precio;
@@ -208,37 +210,31 @@ document.addEventListener("DOMContentLoaded", () => {
             currentIndex = 0;
             modalImg.src = currentImages[currentIndex];
 
-            // Talles dinámicos
-            selectTalle.innerHTML = "";
-            talles.forEach(t => {
+            selectColor.innerHTML = "";
+            colores.forEach(c => {
                 let o = document.createElement("option");
-                o.value = t;
-                o.textContent = t;
-                selectTalle.appendChild(o);
+                o.value = c;
+                o.textContent = c;
+                selectColor.appendChild(o);
             });
 
-            // Reset paquete/cantidad
-            if(selectTipo) selectTipo.value = "Media docena";
             cantidad.value = 1;
 
             modal.style.display = "block";
         });
     });
 
-    // Carousel botones (prev/next)
+    // Carousel
     safeAddEvent(document.getElementById("prev"), "click", () => {
-        if (!currentImages.length) return;
         currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
         modalImg.src = currentImages[currentIndex];
     });
 
     safeAddEvent(document.getElementById("next"), "click", () => {
-        if (!currentImages.length) return;
         currentIndex = (currentIndex + 1) % currentImages.length;
         modalImg.src = currentImages[currentIndex];
     });
 
-    // Cerrar modal
     safeAddEvent(closeModal, "click", () => modal.style.display = "none");
     safeAddEvent(window, "click", (e) => { if (e.target === modal) modal.style.display = "none"; });
 
@@ -246,18 +242,18 @@ document.addEventListener("DOMContentLoaded", () => {
     safeAddEvent(document.getElementById("comprar-whatsapp"), "click", () => {
         const mensaje =
             `Hola! Estoy interesado en ${modalProducto.textContent}\n` +
-            `Talle: ${selectTalle ? selectTalle.value : ""}\n` +
-            `Paquete: ${selectTipo ? selectTipo.value : ""}\n` +
-            `Cantidad: ${cantidad ? cantidad.value : ""}\n` +
-            `Precio: ${modalPrecio ? modalPrecio.textContent : ""}`;
+            `Color: ${selectColor.value}\n` +
+            `Cantidad: ${cantidad.value}\n` +
+            `Precio: ${modalPrecio.textContent}`;
 
-        const url = "https://api.whatsapp.com/send/?phone=5493537667902&text=" + encodeURIComponent(mensaje);
+        const url = "https://api.whatsapp.com/send/?phone=5493537667902&text=" 
+                     + encodeURIComponent(mensaje);
+
         window.open(url, "_blank");
     });
 
 });
 </script>
-
 
 </body>
 </html>

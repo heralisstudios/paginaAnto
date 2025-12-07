@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Catálogo de Pijamas</title>
+    <title>Catálogo de Varios</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/jpeg" href="img/index/logo.jpg">
@@ -23,12 +23,11 @@
 <!-- SIDEBAR -->
 <div id="sidebar" class="sidebar">
     <button id="close-btn" class="close-btn">✖</button>
-
     <div class="sidebar-item"><a href="index.html">Inicio</a></div>
     <div class="sidebar-item"><a href="conjuntos.html">Conjuntos</a></div>
     <div class="sidebar-item"><a href="bikinis.html">Bikinis</a></div>
     <div class="sidebar-item"><a href="pijamas.html">Pijamas</a></div>
-    <div class="sidebar-item"><a href="bombis.html">Bombis (x3)</a></div>
+    <div class="sidebar-item"><a href="bombis.html">Bombis</a></div>
     <div class="sidebar-item"><a href="varios.html">Varios</a></div>
     <div class="sidebar-item"><a href="deportivos.html">Deportivos</a></div>
 </div>
@@ -39,46 +38,21 @@
 <section>
     <div class="catalogo">
 
-        <!-- PIJAMA 1 -->
+        <!-- PRODUCTO 1 -->
         <div class="producto"
-            data-producto="Pijama dama 2 piezas (short + musculosa)"
-            data-precio="$12.000"
+            data-producto="Pezoneras de silicona"
+            data-precio="$3.500"
             data-images='[
-                "img/pijamas/pijama1-1.png",
-                "img/pijamas/pijama1-2.png",
-                "img/pijamas/pijama1-3.png",
-                "img/pijamas/pijama1-4.png",
-                "img/pijamas/pijama1-5.png",
-                "img/pijamas/pijama1-6.png"
-            ]'
-            data-talles='["-"]'
-            data-colores='["-"]'>
+                "img/varios/vario1-1.png"
+            ]'>
             
-            <img src="img/pijamas/pijama1-1.png" alt="">
-            <div class="nombre-producto">Pijama dama 2 piezas (short + musculosa)</div>
-            <div class="precio-producto">$12.000</div>
+            <img src="img/varios/vario1-1.png" alt="">
+            <div class="nombre-producto">Pezoneras de silicona</div>
+            <div class="precio-producto">$3.500</div>
             <button class="btn-comprar">Ver</button>
         </div>
 
-        <!-- PIJAMA 2 -->
-        <div class="producto"
-            data-producto="Pijama dama 2 piezas (remera + short)"
-            data-precio="$13.000"
-            data-images='[
-                "img/pijamas/pijama2-1.png",
-                "img/pijamas/pijama2-2.png"
-            ]'
-            data-talles='["-"]'
-            data-colores='["-"]'>
-            
-            <img src="img/pijamas/pijama2-1.png" alt="">
-            <div class="nombre-producto">Pijama dama 2 piezas (remera + short)</div>
-            <div class="precio-producto">$13.000</div>
-            <button class="btn-comprar">Ver</button>
-        </div>
-
-        <!-- PIJAMA 3 -->
-        
+        <!-- AGREGAR MÁS PRODUCTOS -->
     </div>
 </section>
 
@@ -89,19 +63,13 @@
 
         <div class="modal-carousel">
             <button class="carousel-btn" id="prev">&#10094;</button>
-            <img id="modal-img" src="" alt="vista producto">
+            <img id="modal-img" src="" alt="">
             <button class="carousel-btn" id="next">&#10095;</button>
         </div>
 
         <h3 id="modal-producto">Producto</h3>
         <p id="modal-precio">$0</p>
         <p>&nbsp;</p>
-
-        <label>Talle:</label>
-        <select id="talle"></select>
-
-        <label>Color:</label>
-        <select id="color"></select>
 
         <label>Cantidad:</label>
         <input type="number" id="cantidad" value="1" min="1">
@@ -120,7 +88,7 @@
 <script>
 document.addEventListener("DOMContentLoaded", () => {
 
-    // Animación de aparición
+    // Animación
     document.querySelectorAll(".producto").forEach((p, i) => {
         setTimeout(() => p.classList.add("visible"), i * 150);
     });
@@ -142,8 +110,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const modalPrecio = document.getElementById("modal-precio");
     const modalImg = document.getElementById("modal-img");
 
-    const selectTalle = document.getElementById("talle");
-    const selectColor = document.getElementById("color");
     const cantidad = document.getElementById("cantidad");
 
     let currentImages = [];
@@ -158,8 +124,6 @@ document.addEventListener("DOMContentLoaded", () => {
             const producto = productoDiv.dataset.producto;
             const precio = productoDiv.dataset.precio;
             const images = JSON.parse(productoDiv.dataset.images);
-            const talles = JSON.parse(productoDiv.dataset.talles);
-            const colores = JSON.parse(productoDiv.dataset.colores || '["-"]');
 
             modalProducto.textContent = producto;
             modalPrecio.textContent = precio;
@@ -168,26 +132,7 @@ document.addEventListener("DOMContentLoaded", () => {
             currentIndex = 0;
             modalImg.src = currentImages[currentIndex];
 
-            // Talles
-            selectTalle.innerHTML = "";
-            talles.forEach(t => {
-                let o = document.createElement("option");
-                o.value = t;
-                o.textContent = t;
-                selectTalle.appendChild(o);
-            });
-
-            // Colores
-            selectColor.innerHTML = "";
-            colores.forEach(c => {
-                let o = document.createElement("option");
-                o.value = c;
-                o.textContent = c;
-                selectColor.appendChild(o);
-            });
-
             cantidad.value = 1;
-
             modal.style.display = "block";
         });
     });
@@ -209,7 +154,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // WhatsApp
     document.getElementById("comprar-whatsapp").onclick = () => {
-        const mensaje = `Hola! Estoy interesado en ${modalProducto.textContent} (Talle: ${selectTalle.value}, Color: ${selectColor.value}, Cantidad: ${cantidad.value}) - Precio: ${modalPrecio.textContent}`;
+        const mensaje = 
+`Hola! Estoy interesado en ${modalProducto.textContent}
+Cantidad: ${cantidad.value}
+Precio: ${modalPrecio.textContent}`;
+
         const url = "https://api.whatsapp.com/send/?phone=5493537667902&text=" + encodeURIComponent(mensaje);
         window.open(url, "_blank");
     };
